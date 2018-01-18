@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacturaUp.Login">
+    <ContentPage.Content >
+
+        <StackLayout Padding="0,50,0,0">
+            <Label x:Name="lblHeader" Text="Entrar" FontSize="30" TextColor="Black" HorizontalTextAlignment="Center"></Label>
+
+            <Label Text="Email:" TextColor="Black"></Label>
+            <Entry x:Name="email" Placeholder="Email"></Entry>
+            <Label Text="Contraseña:" TextColor="Black"></Label>
+            <Entry x:Name="password" IsPassword="True" Placeholder="Contraseña"></Entry>
+            <Button  x:Name="btnLogin" Text="Entrar" Clicked="BtnLogin_OnClicked"></Button>
+            <Button x:Name="btnRegister" Text="Registrarse" Clicked="BtnRegister_OnClicked"></Button>
+            <Button x:Name="btnForgotPassword" Text="Olvide mi contraseña"></Button>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

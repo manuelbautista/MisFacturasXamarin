@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FacturaUp.Register" >
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="lblHeader" Text="Registrate" FontSize="30" TextColor="Black" HorizontalTextAlignment="Center"></Label>
+
+            <Label Text="Email:" TextColor="Black"></Label>
+            <Entry x:Name="email" Placeholder="Email"></Entry>
+            <Label Text="Contraseña:" TextColor="Black"></Label>
+            <Entry x:Name="password" IsPassword="True" Placeholder="Contraseña"></Entry>
+            <Label Text="Repetir tu contraseña:" TextColor="Black"></Label>
+            <Entry x:Name="password2" IsPassword="True" Placeholder="Repetir contraseña"></Entry>
+            <Label Text="Tipo Usuario" TextColor="Black"></Label>
+            <!--<Switch x:Name="isAccount" IsToggled="False" HorizontalOptions="Start"></Switch>-->
+            <Picker x:Name="pickerUserType" Title="Tipo Usuario">
+                <Picker.Items>
+                    <x:String>Cliente</x:String>
+                    <x:String>Contador</x:String>
+                </Picker.Items>
+            </Picker>
+            <Button  x:Name="btnRegister" Text="Registrar"></Button>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

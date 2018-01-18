@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:helloWorld="clr-namespace:FacturaUp;assembly=FacturaUp"
+             xmlns:local="clr-namespace:FacturaUp"
+             x:Class="FacturaUp.MainPage">
+    <ContentPage Title="Contables">
+        <ContentPage.Content>
+            <StackLayout>
+                <Button x:Name="btnAddAccounter" Text="Agregar"></Button>
+                <!--<SearchBar Placeholder="Buscar contable" TextChanged="SearchBar_OnTextChanged"></SearchBar>-->
+                <ListView x:Name="listviewAccounters" IsPullToRefreshEnabled="True" Refreshing="ListviewAccounters_OnRefreshing">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <TextCell Text="{Binding Name}" Detail="{Binding Email}">
+                                <TextCell.ContextActions>
+                                    <MenuItem Text="Eliminar" Clicked="MenuItem_OnClicked" IsDestructive="True" CommandParameter="{Binding .}"></MenuItem>
+                                </TextCell.ContextActions>
+                            </TextCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Facturas">
+        <ContentPage.Content>
+            <StackLayout>
+                <Image x:Name="imageInvoice" WidthRequest="300" HeightRequest="300"></Image>
+                <Button x:Name="btnTakePicture" Text="Tirar Foto a Factura" Clicked="BtnTakePicture_OnClicked"></Button>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Mensajes">
+        <ContentPage.Content>
+            <StackLayout>
+                <Label Text="Content of Page 3" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Configuracion">
+        <ContentPage.Content>
+            <StackLayout>
+                <Label Text="Content of Page 4" HorizontalOptions="Center" VerticalOptions="Center"></Label>
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>
